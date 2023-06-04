@@ -23,5 +23,6 @@ func fetchLottoResult(at round: Int) {
         print("아직 진행되지 않은 회차입니다.")
         return
     }
-    print("\(key)의 로또 당첨 번호는 \(result)입니다.")
+    let sortedResult = result.map { String($0) }.joined(separator: " ")
+    print("\(key)의 로또 당첨 번호는 \(sortedResult)입니다.")
 }
